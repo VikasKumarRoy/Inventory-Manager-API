@@ -1,0 +1,5 @@
+*.pyc
+.idea/*
+hardwareManager/media/images/*
+hardwareManager/settings/local.py
+.vscode/*
