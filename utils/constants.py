@@ -1,0 +1,82 @@
+from collections import namedtuple
+
+GENDER = namedtuple('GENDER', ['MALE', 'FEMALE', 'OTHER'])(
+    MALE=1,
+    FEMALE=2,
+    OTHER=3
+)
+
+GENDER_CHOICES = (
+    (GENDER.MALE, 'Male'),
+    (GENDER.FEMALE, 'Female'),
+    (GENDER.OTHER, 'Other'),
+)
+
+ROLE = namedtuple('ROLE', ['ADMIN', 'MANAGER', 'USER'])(
+    ADMIN=4,
+    MANAGER=5,
+    USER=6
+)
+
+ROLE_CHOICES = (
+    (ROLE.ADMIN, 'Admin'),
+    (ROLE.MANAGER, 'Manager'),
+    (ROLE.USER, 'User'),
+)
+
+REQUEST_STATUS = namedtuple('REQUEST_STATUS', ['PENDING', 'APPROVED', 'CANCELLED', 'REJECTED'])(
+    PENDING=7,
+    APPROVED=8,
+    CANCELLED=9,
+    REJECTED=18
+)
+
+REQUEST_STATUS_CHOICES = (
+    (REQUEST_STATUS.PENDING, 'Pending'),
+    (REQUEST_STATUS.APPROVED, 'Approved'),
+    (REQUEST_STATUS.CANCELLED, 'Cancelled'),
+    (REQUEST_STATUS.REJECTED, 'Rejected'),
+)
+
+ACKNOWLEDGE_STATUS = namedtuple('APPROVE_STATUS', ['PENDING', 'ACKNOWLEDGED', 'RETURNED'])(
+    PENDING=10,
+    ACKNOWLEDGED=11,
+    RETURNED=12
+)
+
+ACKNOWLEDGE_STATUS_CHOICES = (
+    (ACKNOWLEDGE_STATUS.PENDING, 'Pending'),
+    (ACKNOWLEDGE_STATUS.ACKNOWLEDGED, 'Acknowledged'),
+    (ACKNOWLEDGE_STATUS.RETURNED, 'Returned'),
+)
+
+ITEM_TYPE = namedtuple('TYPE', ['SHAREABLE', 'RETURNABLE', 'PERMANENT'])(
+    SHAREABLE=13,
+    RETURNABLE=14,
+    PERMANENT=15
+)
+
+ITEM_TYPE_CHOICES = (
+    (ITEM_TYPE.SHAREABLE, 'Shareable'),
+    (ITEM_TYPE.RETURNABLE, 'Returnable'),
+    (ITEM_TYPE.PERMANENT, 'Permanent')
+)
+
+REQUESTED_TO = namedtuple('REQUESTED_TO', ['ADMIN_MANAGER', 'USER'])(
+    ADMIN_MANAGER=16,
+    USER=17,
+)
+
+REQUESTED_TO_CHOICES = (
+    (REQUESTED_TO.ADMIN_MANAGER, 'Admin_Manager'),
+    (REQUESTED_TO.USER, 'User'),
+)
+
+USER_DOES_NOT_EXISTS = 'User does not exist'
+EMAIL_AND_PASSWORD_REQUIRED = 'Email and password required'
+
+SUBJECT_WELCOME = 'Welcome'
+SUBJECT_INVITATION = 'Invitation'
+SUBJECT_REQUEST_APPROVED = 'Request approved'
+SUBJECT_REMINDER_TO_ACKNOWLEDGE = 'Reminder to acknowledge items'
+SUBJECT_REMINDER_TO_RETURN = 'Reminder to return items'
